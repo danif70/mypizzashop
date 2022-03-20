@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Special",
+    "ingredients": ["Cheese", "Tomato", "Pepperoni", "Olives"],
+    "price": "23000",
+    "extras": [
+      ["Peperoni", "4500"],
+      ["Chicken", "5000"],
+      ["Jam", "3000"],
+      ["Cheese", "3000"],
+      ["Pepperball", "3000"],
+      ["Olives", "3000"],
+      ["Onion", "3000"],
+      ["Corn", "3000"],
+      ["Mushrooms", "3000"],
+      ["Pineapple", "3000"],
+      ["Tomato", "3000"],
+      ["Sausage", "3000"],
+      ["Roquefort", "3000"],
+      ["Chorizo", "3000"],
+      ["Broccoli", "3000"],
+      ["Rugula", "3000"]
+    ]
+  },
+ 
+  {
+    "name": "DIY",
+    "ingredients": [],
+    "price": "10000",
+    "extras": [
+      ["Peperoni", "4500"],
+      ["Chicken", "5000"],
+      ["Jam", "3000"],
+      ["Cheese", "3000"],
+      ["Pepperball", "3000"],
+      ["Olives", "3000"],
+      ["Onion", "3000"],
+      ["Corn", "3000"],
+      ["Mushrooms", "3000"],
+      ["Pineapple", "3000"],
+      ["Tomato", "3000"],
+      ["Sausage", "3000"],
+      ["Roquefort", "3000"],
+      ["Chorizo", "3000"],
+      ["Broccoli", "3000"],
+      ["Rugula", "3000"]
+    ]
+  },
+  {
+    "name": "Hawaian",
+    "ingredients": ["Cheese", "Tomato", "Corn", "Ham", "Pineapples"],
+    "price": "22000",
+    "extras": [
+      ["Peperoni", "4500"],
+      ["Chicken", "5000"],
+      ["Jam", "3000"],
+      ["Cheese", "3000"],
+      ["Pepperball", "3000"],
+      ["Olives", "3000"],
+      ["Onion", "3000"],
+      ["Corn", "3000"],
+      ["Mushrooms", "3000"],
+      ["Pineapple", "3000"],
+      ["Tomato", "3000"],
+      ["Sausage", "3000"],
+      ["Roquefort", "3000"],
+      ["Chorizo", "3000"],
+      ["Broccoli", "3000"],
+      ["Rugula", "3000"]
+    ]
+  }
+
+]
