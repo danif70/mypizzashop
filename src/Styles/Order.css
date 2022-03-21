@@ -13,3 +13,12 @@ P {
   justify-content: center; 
   margin-top: 8%;
 }
+.container-button-navigation {
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+  
+}
+.button-navigation {
+  margin-bottom: 5%;
+}

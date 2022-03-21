@@ -1,6 +1,8 @@
 import React, { useState, useEffect, Fragment } from "react";
 import ResumeOrder from "./ResumeOrder";
+import { useNavigate } from "react-router-dom";
 import Pizza from "./Pizza";
+import Dashboard from "./Dashboard";
 import "../Styles/Order.css";
 
 const Order = () => {
@@ -14,8 +16,9 @@ const Order = () => {
   const [phone, setPhone] = useState("");
   const [dates, setDates] = useState(new Date());
   const [objectPizza, setObjectPizza] = useState([]);
-  
- 
+ /*  const [buttonClicked, setButtonClicked] = useState(false); */
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getProduct = async () => {
@@ -29,10 +32,23 @@ const Order = () => {
     getProduct();
   }, []);
 
+  const handleClick2 = (e) => {
+    <Dashboard objectPizza={objectPizza} />;
+    navigate("/dashboard");
+  };
+ /*  const handleButtonClick = () => {
+    buttonClicked === true ? setButtonClicked(false) : setButtonClicked(true);
+  };
+  const calcExtras3 = (value) => {
+    data[0].extras.map((elem) =>
+      elem[0] === value ? setTotalExtras([...totalExtras, elem[1]]) : null
+    );
+  }; */
+
   return (
     <Fragment>
       <div className="all-pizzas-container">
-        <p className='container-title'>NEW ORDER</p>
+        <p className="container-title">NEW ORDER</p>
         <div>
           {data.map((item) => (
             <Pizza
@@ -54,6 +70,27 @@ const Order = () => {
             />
           ))}
         </div>
+       {/*  <div className='pizza-container extramenu'>
+          <p>Choose Extras</p>
+          <button onClick={handleButtonClick}>Extras</button>
+          {buttonClicked === true ? (
+          <div>
+            <select
+              multiple
+              onChange={(e) => {
+                setCurrentExtra([...currentExtra, e.target.value]);
+                calcExtras3(e.target.value);
+              }}
+            >
+              {data[0].extras.map((item) => (
+                <option key={item[0]} value={item[0]}>
+                  {item[0]}
+                </option>
+              ))}
+            </select>
+          </div>
+        ) : null}
+        </div> */}
         <div>
           <ResumeOrder
             pizza={[pizza]}
@@ -69,10 +106,16 @@ const Order = () => {
             objectPizza={objectPizza}
             setObjectPizza={setObjectPizza}
           />
+          <div className='container-button-navigation'>
+          <button className='button-navigation' onClick={(e) => handleClick2(e)}>
+            Dashboard
+          </button>
+          <button className='button-navigation' onClick={(e) => navigate("/")}>
+            Home
+          </button>
+          </div>
         </div>
-
       </div>
-  
     </Fragment>
   );
 };

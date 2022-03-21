@@ -43,25 +43,24 @@ const Pizza = ({
             <p className="pizza-price">${dataPizza.price}</p>
           </div>
           <div className="pizza-buttons">
-            
-              <button
-                value={dataPizza}
-                onClick={() => {
-                  setPizza(dataPizza.name);
-                  setTotalPrice(dataPizza.price);
-                  setDates(
-                    dates.getDate() +
-                      "-" +
-                      (dates.getMonth() + 1) +
-                      "-" +
-                      dates.getFullYear()
-                  );
-                }}
-              >
-                Choose
-              </button>
-              <button onClick={handleButtonClick}>Extras</button>
-            
+            <button
+              value={dataPizza}
+              onClick={() => {
+                setPizza(dataPizza.name);
+                setTotalPrice(dataPizza.price);
+                setDates(
+                  dates.getDate() +
+                    "-" +
+                    (dates.getMonth() + 1) +
+                    "-" +
+                    dates.getFullYear()
+                );
+              }}
+            >
+              Choose
+            </button>
+            <button onClick={handleButtonClick}>Extras</button>
+
             <button onClick={handleOnChange}>Submit</button>
           </div>
         </div>

@@ -17,8 +17,8 @@ const OrderDashboard = ({
   objectPizza,
   setObjectPizza,
 }) => {
-  const navigate = useNavigate();
- 
+ /*  const navigate = useNavigate(); */
+ console.log(totalPizza)
 
   const reduceTotalExtras = () => {
     let totalExtraPrices =
@@ -32,11 +32,12 @@ const OrderDashboard = ({
 
   const handleClick = (e) => {
     setObjectPizza(totalPizza.concat(client, phone));
+    console.log('object', objectPizza)
   };
-  const handleClick2 = (e) => {
+ /*  const handleClick2 = (e) => {
     <Dashboard objectPizza={objectPizza} />;
     navigate("dashboard");
-  };
+  }; */
 
   return (
     <Fragment>
@@ -83,8 +84,7 @@ const OrderDashboard = ({
           </p>{" "}
         </div>
         <button className="button-resume" onClick={handleClick}>Accept</button>
-        {console.log(objectPizza)}
-        <button className="dashboard" onClick={(e) => handleClick2}>Go to Dashboard</button>
+    {/*   <button className="dashboard" onClick={(e) => handleClick2}>Go to Dashboard</button>  */}
       </div>
      
     </Fragment>
