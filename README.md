@@ -7,6 +7,7 @@ La aplicación tiene 3 vistas, la primera es el home con dos botones que redirig
 El proyecto presentó varios retos en su elaboración:
 -Poder tomar los datos de los ingredientes extras por separado y calcular el valor a pagar por todos juntos. Esto se resolvió mapeando en la data de los ingredientes seleccionados.
 -La otra dificultad fue que a pesar que se logra guardar el pedido con toda su data en el local storage, esta se elimina al volver a la vista Order. Esto aún no lo he podido resolver y ha sido el motivo de la tardanza en la entrega.
+-Otro de los retos fue el no poder utilizar librerías con compoonentes listos, especialmente con el select.
 
 Por otra parte traté de hacer una aplicación sencilla, mobile first, con colores fáciles a la vista y diseño alegre.
 También se utilizó el template de PWA (Progressive Web Application) que permite que la app después de ser instalada con NPM install, se puede descargar como una app de escritorio. Y en caso de que se haga deploy en alguna plataforma para ello (Vercel, Heroku, et) se podrá hacer desde cualquier teléfono celular haciendo muy versátil su uso.
