@@ -61,7 +61,7 @@ button:hover {
 
 p {
   margin-bottom: 0;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 .container-title {
 
@@ -79,14 +79,14 @@ p {
   align-items: center;
   display: flex;
   flex-direction: row;
-  font-size: 24px;
+  font-size: 20px;
  
 }
 .pizza-price {
   align-items: center;
   display: flex;
   flex-direction: row;
-  font-size: 24px;
+  font-size: 20px;
 }
 select {
   color: rgb(98, 98, 98);

@@ -17,9 +17,9 @@ const OrderDashboard = ({
   objectPizza,
   setObjectPizza,
 }) => {
- /*  const navigate = useNavigate(); */
- console.log(totalPizza)
 
+ 
+ 
   const reduceTotalExtras = () => {
     let totalExtraPrices =
       totalExtras.reduce(
@@ -30,43 +30,12 @@ const OrderDashboard = ({
     return totalExtraPrices;
   };
 
-  const handleClick = (e) => {
-    setObjectPizza(totalPizza.concat(client, phone));
-    console.log('object', objectPizza)
-  };
- /*  const handleClick2 = (e) => {
-    <Dashboard objectPizza={objectPizza} />;
-    navigate("dashboard");
-  }; */
-
   return (
     <Fragment>
       <div className="container-order-dashboard">
         <p className='container-title'>ORDER RESUME</p>
-        <div className="client-section">
-          <input
-            className="client-name"
-            value={client}
-            type="text"
-            placeholder='Name'
-            required
-            onChange={(e) => {
-              setClient(e.target.value);
-            }}
-          />
-          <input
-            className="client-phone"
-            value={phone}
-            type="tel"
-            placeholder='Phone'
-            required
-            onChange={(e) => {
-              setPhone(e.target.value);
-            }}
-          />
-         
-        </div>
-       
+        <p>Name client: {client}</p>
+        <p>Phone: {phone}</p>
         <div className='p-resume-order'>
           <p>Pizza {pizza}</p>
           <div>
@@ -83,8 +52,7 @@ const OrderDashboard = ({
             {totalPizza !== [] ? reduceTotalExtras() : 0}{" "}
           </p>{" "}
         </div>
-        <button className="button-resume" onClick={handleClick}>Accept</button>
-    {/*   <button className="dashboard" onClick={(e) => handleClick2}>Go to Dashboard</button>  */}
+    
       </div>
      
     </Fragment>

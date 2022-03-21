@@ -15,7 +15,7 @@ const Home = () => {
         <button className='home-button'>Order</button>
       </a>
       <a className='button-home' href="/dashboard">
-        <button className='home-button'>Order Dashboard</button>
+        <button className='home-button'>Dashboard</button>
       </a>
       </div>
     </>

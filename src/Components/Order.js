@@ -16,9 +16,11 @@ const Order = () => {
   const [phone, setPhone] = useState("");
   const [dates, setDates] = useState(new Date());
   const [objectPizza, setObjectPizza] = useState([]);
- /*  const [buttonClicked, setButtonClicked] = useState(false); */
-
   const navigate = useNavigate();
+
+  localStorage.setItem("totalOrder_V1", JSON.stringify(totalPizza));
+
+  console.log("order", totalPizza);
 
   useEffect(() => {
     const getProduct = async () => {
@@ -27,29 +29,44 @@ const Order = () => {
       });
       const data = await response.json();
       setData(data);
-      //console.log(data)
     };
     getProduct();
   }, []);
 
   const handleClick2 = (e) => {
-    <Dashboard objectPizza={objectPizza} />;
+    <Dashboard totalPizza={totalPizza}  />;
     navigate("/dashboard");
   };
- /*  const handleButtonClick = () => {
-    buttonClicked === true ? setButtonClicked(false) : setButtonClicked(true);
-  };
-  const calcExtras3 = (value) => {
-    data[0].extras.map((elem) =>
-      elem[0] === value ? setTotalExtras([...totalExtras, elem[1]]) : null
-    );
-  }; */
 
   return (
     <Fragment>
       <div className="all-pizzas-container">
         <p className="container-title">NEW ORDER</p>
         <div>
+          <div>
+            <div className="client-section">
+              <input
+                className="client-name"
+                value={client}
+                type="text"
+                placeholder="Name"
+                required
+                onChange={(e) => {
+                  setClient(e.target.value);
+                }}
+              />
+              <input
+                className="client-phone"
+                value={phone}
+                type="tel"
+                placeholder="Phone"
+                required
+                onChange={(e) => {
+                  setPhone(e.target.value);
+                }}
+              />
+            </div>
+          </div>
           {data.map((item) => (
             <Pizza
               key={item.name}
@@ -67,30 +84,12 @@ const Order = () => {
               setTotalPrice={setTotalPrice}
               dates={dates}
               setDates={setDates}
+              client={client}
+              phone={phone}
             />
           ))}
         </div>
-       {/*  <div className='pizza-container extramenu'>
-          <p>Choose Extras</p>
-          <button onClick={handleButtonClick}>Extras</button>
-          {buttonClicked === true ? (
-          <div>
-            <select
-              multiple
-              onChange={(e) => {
-                setCurrentExtra([...currentExtra, e.target.value]);
-                calcExtras3(e.target.value);
-              }}
-            >
-              {data[0].extras.map((item) => (
-                <option key={item[0]} value={item[0]}>
-                  {item[0]}
-                </option>
-              ))}
-            </select>
-          </div>
-        ) : null}
-        </div> */}
+
         <div>
           <ResumeOrder
             pizza={[pizza]}
@@ -106,13 +105,19 @@ const Order = () => {
             objectPizza={objectPizza}
             setObjectPizza={setObjectPizza}
           />
-          <div className='container-button-navigation'>
-          <button className='button-navigation' onClick={(e) => handleClick2(e)}>
-            Dashboard
-          </button>
-          <button className='button-navigation' onClick={(e) => navigate("/")}>
-            Home
-          </button>
+          <div className="container-button-navigation">
+            <button
+              className="button-navigation"
+              onClick={(e) => handleClick2(e)}
+            >
+              Dashboard
+            </button>
+            <button
+              className="button-navigation"
+              onClick={(e) => navigate("/")}
+            >
+              Home
+            </button>
           </div>
         </div>
       </div>

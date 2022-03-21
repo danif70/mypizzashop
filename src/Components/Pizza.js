@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import "../Styles/Pizza.css";
 
 const Pizza = ({
@@ -11,12 +11,15 @@ const Pizza = ({
   totalExtras,
   setTotalExtras,
   totalPizza,
-  setTotalPizza,
+  setTotalPizza, 
   totalPrice,
   setTotalPrice,
   dates,
   setDates,
+  client,
+  phone
 }) => {
+
   const [buttonClicked, setButtonClicked] = useState(false);
   const handleButtonClick = () => {
     buttonClicked === true ? setButtonClicked(false) : setButtonClicked(true);
@@ -25,7 +28,9 @@ const Pizza = ({
   const handleOnChange = (e) => {
     setPizza(dataPizza.name);
 
-    setTotalPizza(currentExtra.concat(totalExtras, pizza, totalPrice, dates));
+    setTotalPizza(currentExtra.concat(totalExtras, pizza, totalPrice, dates, client, phone));
+    console.log(totalPizza)
+    
   };
 
   const calcExtras3 = (value) => {
