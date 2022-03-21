@@ -16,22 +16,16 @@ const Pizza = ({
   setTotalPrice,
   dates,
   setDates,
-  
 }) => {
-
   const [buttonClicked, setButtonClicked] = useState(false);
-
   const handleButtonClick = () => {
     buttonClicked === true ? setButtonClicked(false) : setButtonClicked(true);
   };
 
-
   const handleOnChange = (e) => {
     setPizza(dataPizza.name);
-    
-    setTotalPizza(
-      currentExtra.concat(  totalExtras, pizza, totalPrice, dates )
-    );
+
+    setTotalPizza(currentExtra.concat(totalExtras, pizza, totalPrice, dates));
   };
 
   const calcExtras3 = (value) => {
@@ -49,19 +43,25 @@ const Pizza = ({
             <p className="pizza-price">${dataPizza.price}</p>
           </div>
           <div className="pizza-buttons">
-            <div className="pizza-buttons12">
+            
               <button
                 value={dataPizza}
                 onClick={() => {
                   setPizza(dataPizza.name);
                   setTotalPrice(dataPizza.price);
-                  setDates((dates.getDate())+'-'+(dates.getMonth()+1)+'-'+ (dates.getFullYear()))
+                  setDates(
+                    dates.getDate() +
+                      "-" +
+                      (dates.getMonth() + 1) +
+                      "-" +
+                      dates.getFullYear()
+                  );
                 }}
               >
                 Choose
               </button>
               <button onClick={handleButtonClick}>Extras</button>
-            </div>
+            
             <button onClick={handleOnChange}>Submit</button>
           </div>
         </div>

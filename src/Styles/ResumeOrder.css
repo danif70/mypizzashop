@@ -1,0 +1,52 @@
+.container-order-dashboard {
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px 5px rgb(209, 206, 206);
+  color: rgb(98, 98, 98);
+  display: flex;
+  flex-direction:column;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 5%;
+  margin-left: 12%;
+  margin-bottom: 5%;
+  padding: 10px;
+  width: 70%;
+}
+  
+
+.client-section {
+display: flex;
+justify-content:center;
+}
+input {
+  background-color:  rgba(243, 223, 223, 0.719);
+  border: 2px solid rgb(209, 109, 109);
+  border-radius: 10px;
+  font-size: 18px;
+  margin: 6px;
+  margin-top: 15px;
+  padding: 8px;
+  width: 40%;
+}
+.p-resume-order {
+width: 80%;
+}
+
+.p-total-extras{
+width: 80%;
+}
+.p-extras {
+  font-size: 15px;
+  margin-left: 15;
+}
+ .button-resume {
+  width: 40%;
+ }
+ .dashboard {
+   width: 70%;
+   padding:10px;
+ }

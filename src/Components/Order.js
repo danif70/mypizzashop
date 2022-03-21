@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
-import OrderDashboard from "./OrderDashboard";
+import ResumeOrder from "./ResumeOrder";
 import Pizza from "./Pizza";
 import "../Styles/Order.css";
 
@@ -13,7 +13,9 @@ const Order = () => {
   const [client, setClient] = useState("");
   const [phone, setPhone] = useState("");
   const [dates, setDates] = useState(new Date());
-  const [objectPizza, setObjectPizza] = useState([])
+  const [objectPizza, setObjectPizza] = useState([]);
+  
+ 
 
   useEffect(() => {
     const getProduct = async () => {
@@ -30,7 +32,7 @@ const Order = () => {
   return (
     <Fragment>
       <div className="all-pizzas-container">
-        <p>NEW ORDER</p>
+        <p className='container-title'>NEW ORDER</p>
         <div>
           {data.map((item) => (
             <Pizza
@@ -48,13 +50,12 @@ const Order = () => {
               totalPrice={totalPrice}
               setTotalPrice={setTotalPrice}
               dates={dates}
-            setDates={setDates}
+              setDates={setDates}
             />
           ))}
         </div>
-
         <div>
-          <OrderDashboard
+          <ResumeOrder
             pizza={[pizza]}
             totalPizza={totalPizza}
             setTotalPizza={setTotalPizza}
@@ -65,12 +66,13 @@ const Order = () => {
             setClient={setClient}
             phone={phone}
             setPhone={setPhone}
-            
             objectPizza={objectPizza}
             setObjectPizza={setObjectPizza}
           />
         </div>
+
       </div>
+  
     </Fragment>
   );
 };

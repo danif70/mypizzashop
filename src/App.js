@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "../src/Components/Home";
 import Order from "../src/Components/Order"
-import OrderDashboard from "../src/Components/OrderDashboard";
+import Dashboard from "../src/Components/Dashboard";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="order" element={<Order />} />
-        <Route path="dashboard" element={<OrderDashboard />} />
+        <Route path="dashboard" element={<Dashboard />} />
       </Routes>
     </>
   );
