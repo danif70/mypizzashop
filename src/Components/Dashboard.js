@@ -8,7 +8,7 @@ const Dashboard = ({ objectPizza }) => {
     <Fragment>
       <p>ORDER TRACKING</p>
       <div className="container-order-dashboard">
-        <p>hola</p>
+        <p>1ra orden</p>
       </div>
       <div className="container-button-navigation">
         <button className='button-navigation' onClick={(e) => navigate("/order")}>Order</button>
