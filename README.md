@@ -12,3 +12,16 @@ El proyecto presentó varios retos en su elaboración:
 Por otra parte traté de hacer una aplicación sencilla, mobile first, con colores fáciles a la vista y diseño alegre.
 También se utilizó el template de PWA (Progressive Web Application) que permite que la app después de ser instalada con NPM install, se puede descargar como una app de escritorio. Y en caso de que se haga deploy en alguna plataforma para ello (Vercel, Heroku, et) se podrá hacer desde cualquier teléfono celular haciendo muy versátil su uso.
 
+![Home] (src\image\mypizzaapp1.jpg)
+
+![Order] (src\image\mypizzaapp2.jpg)
+
+![Order Resume] (src\image\mypizzaapp3.jpg)
+
+![Select Extras en mobile] (src\image\mypizzaapp4.jpg)
+
+![Order Resume con data] (src\image\mypizzaapp5.jpg)
+
+![Instalación desde desktop] (src\image\mypizzaapp6.png)
+
+![App instalada en desktop] (src\image\mypizzaapp7.png)
