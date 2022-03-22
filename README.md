@@ -12,16 +12,16 @@ El proyecto presentó varios retos en su elaboración:
 Por otra parte traté de hacer una aplicación sencilla, mobile first, con colores fáciles a la vista y diseño alegre.
 También se utilizó el template de PWA (Progressive Web Application) que permite que la app después de ser instalada con NPM install, se puede descargar como una app de escritorio. Y en caso de que se haga deploy en alguna plataforma para ello (Vercel, Heroku, et) se podrá hacer desde cualquier teléfono celular haciendo muy versátil su uso.
 
-![Home] (images-readme\mypizzaapp1.jpg)
+<img src="https://github.com/danif70/mypizzashop/blob/main/images-readme/mypizzaapp1.jpg">
 
-![Order] (images-readme\mypizzaapp2.jpg)
+<img src="https://github.com/danif70/mypizzashop/blob/main/images-readme/mypizzaapp2.jpg">
 
-![Order Resume] (images-readme\mypizzaapp3.jpg)
+<img src="https://github.com/danif70/mypizzashop/blob/main/images-readme/mypizzaapp3.jpg">
 
-![Select Extras en mobile] (images-readme\mypizzaapp4.jpg)
+<img src="https://github.com/danif70/mypizzashop/blob/main/images-readme/mypizzaapp4.jpg">
 
-![Order Resume con data] (images-readme\mypizzaapp5.jpg)
+<img src="https://github.com/danif70/mypizzashop/blob/main/images-readme/mypizzaapp5.jpg">
 
-![Instalación desde desktop] (images-readme\mypizzaapp6.png)
+<img src="https://github.com/danif70/mypizzashop/blob/main/images-readme/mypizzaapp6.png">
 
-![App instalada en desktop] (images-readme\mypizzaapp7.png)
+<img src="https://github.com/danif70/mypizzashop/blob/main/images-readme/mypizzaapp7.png">
